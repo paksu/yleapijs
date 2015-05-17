@@ -16,6 +16,6 @@ api.get('programs/categories')
 	// do stuff
 })
 .catch(function(error) {
-	console.log("got error, error.statusCode, error.responseBody");
+	console.log("got error", error.statusCode, error.responseBody);
 })
 ```
