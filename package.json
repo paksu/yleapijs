@@ -1,10 +1,11 @@
 {
   "name": "ylejs",
-  "description": "Yleisradio API client for node",
+  "description": "Yleisradio API client for nodejs",
   "version": "0.0.1",
   "author": "@joonapaak",
   "keywords": [],
   "dependencies": {
+    "extend": "^2.0.1",
     "q": "^1.4.1"
   },
   "devDependencies": {

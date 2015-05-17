@@ -1,6 +1,6 @@
 var assert = require('assert'),
   YleAPI = require('../lib/yleapi'),
-  config1 = require('../config1');
+  testconfig = require('../config1');
 
 describe('ylepi', function () {
   describe('config', function () {
@@ -12,7 +12,7 @@ describe('ylepi', function () {
     });
   });
 
-  describe('GET \'programs\'', function () {
+  describe('GET \'programs/categories\'', function () {
     var api = null;
     before(function () {
       api = new YleAPI({
@@ -32,7 +32,7 @@ describe('ylepi', function () {
 
       it('returns when request was not successful', function (done) {
         // should fail because our credentials are not valid
-        api.get('programs', {}).catch(function(responseStatus, responseBody) {
+        api.get('programs/categories', {}).catch(function(responseStatus, responseBody) {
           done();
         });
       });
@@ -40,12 +40,12 @@ describe('ylepi', function () {
 
     describe('returns data', function () {
       before(function () {
-        api = new YleAPI(config1);
+        api = new YleAPI(testconfig);
       });
 
-      it('returns when request was not successful', function (done) {
+      it('resolves into parsed response JSON', function (done) {
         // should fail because our credentials are not valid
-        api.get('programs', {}).then(function(response) {
+        api.get('programs/categories', {}).then(function(response) {
           assert.ok(response.meta);
           assert.ok(response.data);
           done();
