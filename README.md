@@ -2,6 +2,11 @@ Simple promise based API client for YLE API http://developer.yle.fi/
 
 by [@joonapaak](http://twitter.com/joonapaak)
 
+### Install
+`$ npm install yleapi`
+
+
+### Initialize
 ```
 var YleAPI = require('yleapi');
 
