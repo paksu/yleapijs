@@ -28,7 +28,7 @@ api.get('resource/path', {params})
 api.decryptMediaUrl(encryptedUrl)
 ```
 
-###Examples
+### Examples
 ```
 // get most popular programs
 api.get('programs/items', {
