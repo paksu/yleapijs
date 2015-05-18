@@ -1,7 +1,7 @@
 {
   "name": "ylejs",
   "description": "Yleisradio API client for nodejs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "@joonapaak",
   "keywords": [],
   "dependencies": {
@@ -14,7 +14,7 @@
   "main": "./lib/yleapi",
   "repository": {
     "type": "git",
-    "url": "TODO"
+    "url": "https://github.com/paksu/yleapijs.git"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha tests/* -t 70000 -R spec --bail"
