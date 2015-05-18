@@ -56,5 +56,13 @@ YleAPI uses `util.debuglog`. To requests run your script with `NODE_DEBUG`:
 `$ env NODE_DEBUG=yleapi node myscript.js`
 
 ### Develop
+**Run tests:** `$ npm test`
 
-Run tests: `$ npm test`
+Tests currently need file called `test_config.js` at the root of the project. This file should export the API keys like this:
+```
+module.exports = {
+    APP_ID: 'a',
+    APP_KEY: 'b',
+    MEDIA_DECRYPT_KEY: 'c'
+};
+```
