@@ -44,7 +44,6 @@ describe('ylepi', function () {
       });
 
       it('resolves into parsed response JSON', function (done) {
-        // should fail because our credentials are not valid
         api.get('programs/categories', {}).then(function(response) {
           assert.ok(response.meta);
           assert.ok(response.data);
