@@ -1,6 +1,6 @@
 var assert = require('assert'),
   YleAPI = require('../lib/yleapi'),
-  testconfig = require('../config1');
+  testconfig = require('../test_config');
 
 describe('ylepi', function () {
   describe('config', function () {
@@ -53,5 +53,20 @@ describe('ylepi', function () {
       });
     });
 
+    describe('decryptMediaUrl', function () {
+      before(function () {
+        api = new YleAPI({
+          APP_ID: testconfig.APP_ID,
+          APP_KEY: testconfig.APP_KEY
+        });
+      });
+
+      it('throws error if there is no media key', function (done) {
+        assert.throws(function () {
+          api.decryptMediaUrl('foo');
+        }, Error);
+        done();
+      });
+    });
   });
 });

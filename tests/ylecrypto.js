@@ -1,6 +1,6 @@
 var assert = require('assert'),
   ylecrypto = require('../lib/ylecrypto'),
-  testconfig = require('../config1');
+  testconfig = require('../test_config');
 
 describe('ylecrypto', function () {
   it('should decrypt media urls', function(done) {
