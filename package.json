@@ -5,6 +5,7 @@
   "author": "@joonapaak",
   "keywords": [],
   "dependencies": {
+    "debuglog": "^1.0.1",
     "extend": "^2.0.1",
     "q": "^1.4.1"
   },
